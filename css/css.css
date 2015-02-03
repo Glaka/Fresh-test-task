@@ -1,0 +1,132 @@
+body { background: #222222 url(../bg.jpg) repeat;
+	font: 12px/1.4em Arial; 
+	color: #ffffff;
+	height: 1800px}
+
+main {width: 540px; 
+	height: 390px; 
+	position: absolute; 
+	top: 50px; 
+	left: 50px;  
+	background: rgba(0, 0, 0, 0.6);	
+	border-radius: 10px;
+	box-sizing: border-box; 
+	padding: 10px 10px 10px 30px;}
+
+h1 {font-size: 200%; line-height: 1.2;
+color: #92a227;}	
+
+li {list-style: decimal;}
+
+#otp { width:296px ;
+	height: 52px;
+	position: absolute;
+	top: 500px;
+	left: 50px;
+	border-radius: 10px;
+	color: #bed22d;
+	font-size: 22px;}
+
+
+#otp:hover {color: #fdb73f ;}
+#otp:active {color: #000000;}
+
+aside { height: 290px; 
+		width: 100%;
+		position: fixed;
+		/*bottom: 0px; */ 
+		bottom: -270px; 
+		left: 0px; 
+		border-top: dotted 2px ;
+	 box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;}
+
+.unhide {bottom: 0;}
+
+.slide1 { height: 100%;
+		width: 100%;
+		background: rgba(0, 0,0,0.8);
+}
+.slide2 {height: 100%;
+		width: 100%;
+		background: rgba(0, 0,0,0.8); 
+	} 
+
+.none {display: none;}
+
+.buttonAction {display: none; }
+
+#otpBlock {position: absolute;
+			top: 450px;
+			left: 380px;
+			width: 200px;
+			height: 100px;
+			background: rgba(0, 0, 0, 0.5);
+			border-radius: 90px 20px 90px 20px ;
+			box-sizing: border-box;
+			padding: 35px 20px 10px 40px;
+			font-size: 14px;
+			color: #bed22d;
+			text-transform: uppercase;
+	}
+
+.arrow { width: 60px;
+		height: 20px;
+		background: rgba(0, 0,0,0.8);
+		position: absolute;
+		border-radius: 100px 100px 0px 0px; }
+
+.arrUP {top: -20px;
+		left: 45%;
+		}
+
+.arrL {top: 150px;
+		left: -20px;
+		background: #555555;
+		transform: rotate(90deg);
+		}
+
+.arrR {top: 150px;
+		right: -20px;
+	background: #555;
+	transform: rotate(270deg)}
+
+#arrow-down {width: 0; 
+			height: 0; 
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #bed22d;
+			top: 5px;
+			left: 20px;
+			position: absolute;}
+
+#arrow-left {width: 0; 
+			height: 0; 
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #bed22d;
+			top: 5px;
+			left: 20px;
+			position: absolute;
+			}
+
+#arrow-right {width: 0; 
+			height: 0; 
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #bed22d;
+			top: 5px;
+			left: 20px;
+			position: absolute;}
+
+#scrollbar1 { }
+
+#fresh { font-size: 18px;
+		color: #bed22d;}
+
+#fresh:visited {color: #bed22d;}
+#fresh:hover {color: #fdb73f ;}
+#fresh:active {color: #ffffff ;}
+
+

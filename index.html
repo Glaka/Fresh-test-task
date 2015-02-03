@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<title>test task</title>
+<link rel="stylesheet" href="css/resetCss.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="tinyscrollbar.css">
+<link href="css/lightbox.css" rel="stylesheet">
+<meta charset="UTF-8">
+</head>
+
+<body>
+	<main>
+<h1>Описание тестового задания</h1><br>
+<p>Задача- сверстать данный макет, а так же реализовать базовые операции на JavaScript (допустимо использование jQuery)</p>
+<ol start="0">
+	<li>Фон зациклен для всего документа</li>
+	<li>Использование преимуществ CSS3 приветствуеться</li>
+	<li>Выпадающая панель зафиксирована в нижней части экрана (независимо от размеров экрана). При этом ширина панели фиксирована</li>
+	<li>При наведении на кнопку "Open the panel" отображаеться всплывающее окно( справа от кнопки )</li>
+	<li>В нижней панели есть кнопки влево и вправо - при нажатии на них происходит прокрутка контента панели влево и вправо </li>
+	<li>По умолчанию открыто отображение Slide 1, при нажатии на кнопку вправо происходит прокрутка до отображения, представленого в папке 
+Slide 2 (отображаеться Foto's)	</li>
+	<li>Для блока Foto's в папке Slide 2 подключить стандартный плагин 
+		Lightbox или же альтернативный плагин на усмотрение исполнителя) для просмотра увеличенных версий фото</li>
+	<li>Для блока Foto's в папке Slide 2 подключить стандартный плагин прокрутки (TinyScrollbar или аналогичный)</li>
+	<li>Верстать данный блок с описанием тестового задания не обязательно;)</li>
+<!-- Ну правда ведь написано было что верстать не обязательно ) -->
+</ol>
+	</main>
+
+<!-- меню --> 
+	<button id="otp">Open the panel</button>
+	<div id="otpBlock" class="buttonAction">Всплывающее окно</div>
+<aside>
+		<div class="arrow arrUP" id="opener"><div id="arrow-down"></div></div>
+		<div class="arrow arrL" id="toLeft"><div id="arrow-left"></div></div>
+		<div class="arrow arrR" id="toRight"><div id="arrow-right"></div></div>
+
+<!-- 1й слайд -->
+
+<div class="slide1 ">
+	<div style="width:200px; height: 200px; position:absolute; top: 25px; left: 15%;">
+		<h1>Lightbox </h1><br>
+		<p>is a JavaScript technique used to display images 
+			and other web content similar to a modal dialogs
+			 where the image is shown up center filling most 
+			 of the screen, and the rest of the window is dimmed out.</p></div>
+<div style="width:380px; height: 200px; position:absolute; top: 25px; left: 35%;">
+		<h1>Videos:</h1><br>
+		<video height="100" width="180" controls src="Vid1.mp4"></video>
+		<video height="100" width="180" controls src="Vid2.mp4"></video>
+	</div>
+<div style="width:200px; height: 200px; position:absolute; top: 25px; right: 15%;">
+	<h1>Links:</h1><br>
+	<a href="http://fresh-design.com.ua/" id="fresh"><p>Fresh</p></a>
+	</div>
+</div>
+
+<!-- 2й слайд-->
+
+<div class="slide2 none">
+	<div style="width:380px; height: 200px; position:absolute; top: 25px; left: 15%;">
+		<h1>Videos:</h1><br>
+		<video height="100" width="180" controls src="Vid1.mp4"></video>
+		<video height="100" width="180" controls src="Vid2.mp4"></video></div>
+<div style="width:200px; height: 200px; position:absolute; top: 25px; left: 50%;">
+		<h1>Links:</h1><br>
+	<a href="http://fresh-design.com.ua/" id="fresh" target="blank"><p>Fresh</p></a>
+	</div>
+<div style="width:200px; height: 200px; position:absolute; top: 25px; right: 15%; overflow: hidden;">
+	<h1>Foto's</h1></br>
+
+<!-- scroll-->
+<div id="scrollbar">
+		<a href="img1.jpg" data-lightbox="img"><img src="img11.jpg"></a>
+	<a href="img2.jpg" data-lightbox="img"><img src="img22.jpg"></a>
+	<a href="img3.jpg" data-lightbox="img"><img src="img33.jpg"></a>
+	<a href="img4.jpg" data-lightbox="img"><img src="img44.jpg"></a>
+	<a href="img5.jpg" data-lightbox="img"><img src="img55.jpg"></a>
+	<a href="img6.jpg" data-lightbox="img"><img src="img66.jpg"></a>
+</div>
+</aside>
+
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="jquery.tinyscrollbar.min.js"></script>
+<script>
+$(document).ready(function(){
+		$('#otp').mouseenter(function(){
+	$('#otpBlock').removeClass("buttonAction")
+	});
+	$('#otp').mouseleave(function(){
+	$('#otpBlock').addClass("buttonAction")
+});
+		$('#opener').click(function(){
+	$('aside').toggleClass("unhide")
+	});
+		$('#toLeft').click(function(){
+			$('.slide1').toggleClass("none")
+			$('.slide2').toggleClass("none")
+
+		});
+		$('#toRight').click(function(){
+			$('.slide1').toggleClass("none")
+			$('.slide2').toggleClass("none")
+		});
+$("#scrollbar").tinyscrollbar();
+
+});
+/*$(document).ready(function()
+{
+    $("#scrollbar1").tinyscrollbar();
+}); */
+
+</script>
+</body>
+</html>
